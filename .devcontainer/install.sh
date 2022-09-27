@@ -8,9 +8,3 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 cp .devcontainer/.zshrc $HOME/.zshrc
 cp .devcontainer/.p10k.zsh $HOME/.p10k.zsh
-
-sudo apt -y install neovim xsel wl-clipboard ripgrep
-
-npm i -g neovim
-
-git clone https://github.com/LunarVim/nvim-basic-ide.git $HOME/.config/nvim

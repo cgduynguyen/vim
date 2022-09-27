@@ -8,6 +8,6 @@
   "onCreateCommand": "sh .devcontainer/install.sh",
   "remoteUser": "vscode",
   "features": {
-    "node": "lts"
+    "node": "16"
   }
 }
