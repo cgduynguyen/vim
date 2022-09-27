@@ -8,6 +8,10 @@ NONINTERACTIVE=1
 # Install zsh tmux moreutils
 brew install zsh tmux moreutils
 
+# Install nerd-font
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+
 # Install ohmyzsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
