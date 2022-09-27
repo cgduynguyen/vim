@@ -1,4 +1,5 @@
 " beign vim settings"
+let mapleader = " "
 set number
 set shell=zsh
 set term=screen-256color
@@ -41,7 +42,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$']
-nmap <C-b> :NERDTreeToggle<CR>
+nmap <leader>b :NERDTreeToggle<CR>
 " -------------------- nerdtree end --------------------
 
 " -------------------- ctrlp start --------------------
