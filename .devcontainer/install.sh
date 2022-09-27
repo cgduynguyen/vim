@@ -9,7 +9,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/LunarVim/nvim-basic-ide.git ~/.config/nvim
 
 cp .devcontainer/.zshrc $HOME/.zshrc
-cp .devcontainer/.p10k.zsh $HOME/.p10k.zshi
+cp .devcontainer/.p10k.zsh $HOME/.p10k.zsh
 
 pip install pynvim
 npm i -g neovim
