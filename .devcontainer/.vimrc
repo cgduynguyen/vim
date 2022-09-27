@@ -31,6 +31,7 @@ call plug#begin()
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'pangloss/vim-javascript'
   Plug 'MaxMEllon/vim-jsx-pretty'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 " end vim-plug
 
