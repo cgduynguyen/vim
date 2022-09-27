@@ -1,11 +1,48 @@
-" beign vim settings"
-let mapleader = " "
-set shell=zsh
+" ========================================================================================
+" Make vim incompatbile to vi.
+set nocompatible
+set modelines=0
+
+" ========================================================================================
+"TAB settings.
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set showtabline=2
+set ruler
+
+" ========================================================================================
+" More Common Settings.
 set term=screen-256color
 set number
-" end vim settings
+set shell=$SHELL
 
-" begin vim-plug
+" ========================================================================================
+"Changing Leader Key
+let mapleader = ","
+
+" ========================================================================================
+" Map : to ; also in command mode.
+nnoremap ; :
+vmap ; :
+nmap <silent> <leader>/ :nohlsearch<CR>
+" ========================================================================================
+
+" ========================================================================================
+" To  show special characters in Vim
+"set list
+set listchars=tab:▸\ ,eol:¬
+
+" ,ft Fold tag, helpful for HTML editing.
+nnoremap <leader>ft vatzf
+
+" ,q Re-hardwrap Paragraph
+nnoremap <leader>q gqip
+
+
+" ========================================================================================
+" vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -33,9 +70,9 @@ call plug#begin()
   Plug 'MaxMEllon/vim-jsx-pretty'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
-" end vim-plug
 
-" -------------------- nerdtree start --------------------
+" ========================================================================================
+" nerdtree
 " Start NERDTree when Vim starts with a directory argument.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
@@ -44,14 +81,16 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$']
 nmap <leader>b :NERDTreeToggle<CR>
-" -------------------- nerdtree end --------------------
 
-" -------------------- ctrlp start --------------------
+" ========================================================================================
+" ctrlp
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-" -------------------- ctrlp end --------------------
+"
 
-" ------------------- coc start ------------------
+" ========================================================================================
+" coc 
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-html', 'coc-css', 'coc-eslint', 'coc-prettier']
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: There's always complete item selected by default, you may want to enable
 " no select by `"suggest.noselect": true` in your configuration file.
@@ -190,4 +229,5 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-"-------------------- coc end -----------------
+
+" ========================================================================================
