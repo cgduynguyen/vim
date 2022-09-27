@@ -1,5 +1,7 @@
 " beign vim settings"
-:set number
+set number
+set shell=zsh
+set term=screen-256color
 " end vim settings
 
 " begin vim-plug
@@ -21,7 +23,13 @@ call plug#begin()
   Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'vim-airline/vim-airline'
+  Plug 'tpope/vim-fugitive'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+  Plug 'pangloss/vim-javascript'
+  Plug 'MaxMEllon/vim-jsx-pretty'
 call plug#end()
 " end vim-plug
 
@@ -33,6 +41,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 
 let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\.git$']
+nmap <C-b> :NERDTreeToggle<CR>
 " -------------------- nerdtree end --------------------
 
 " -------------------- ctrlp start --------------------

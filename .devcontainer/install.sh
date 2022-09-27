@@ -13,19 +13,3 @@ cp .devcontainer/.zshrc ~/.zshrc
 cp .devcontainer/.p10k.zsh ~/.p10k.zsh
 cp .devcontainer/.vimrc ~/.vimrc
 
-# Install ctrlp
-mkdir -p ~/.vim/pack/plugins/start
-git clone --depth=1 https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/pack/plugins/start/ctrlp
-
-# Install fugitive
-mkdir -p ~/.vim/pack/tpope/start
-cd ~/.vim/pack/tpope/start
-git clone https://tpope.io/vim/fugitive.git
-vim -u NONE -c "helptags fugitive/doc" -c q
-
-# install vim-gitgutter
-mkdir -p ~/.vim/pack/airblade/start
-cd ~/.vim/pack/airblade/start
-git clone https://github.com/airblade/vim-gitgutter.git
-vim -u NONE -c "helptags vim-gitgutter/doc" -c q
-
