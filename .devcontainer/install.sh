@@ -21,9 +21,11 @@ git clone https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zs
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+mkdir -p ~/.vim
+
 # Copy dotfiles
 cp .devcontainer/.zshrc ~/.zshrc
 cp .devcontainer/.p10k.zsh ~/.p10k.zsh
 cp .devcontainer/.tmux.conf ~/.tmux.conf
 cp .devcontainer/.vimrc ~/.vimrc
-cp .devcontainer/coc-settings.json ~/.vim/.coc-settings.json
+cp .devcontainer/coc-settings.json ~/.vim/coc-settings.json
