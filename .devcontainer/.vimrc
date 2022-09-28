@@ -44,6 +44,11 @@ nnoremap <leader>ft vatzf
 " ,q Re-hardwrap Paragraph
 nnoremap <leader>q gqip
 
+" ========================================================================================
+" For beautiful
+set showtabline=0
+highlight clear SignColumn
+highlight clear VertSplit
 
 " ========================================================================================
 " vim-plug
